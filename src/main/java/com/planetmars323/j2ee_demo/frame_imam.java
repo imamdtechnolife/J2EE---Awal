@@ -26,7 +26,7 @@ public class frame_imam extends JFrame{
 	{
 		public void actionPerformed(ActionEvent e)
 		{
-			JOptionPane.showMessageDialog(null, "selamat datang imam");
+			JOptionPane.showMessageDialog(null, "selamat datang anonymous :)");
 		}
 	}
 }
