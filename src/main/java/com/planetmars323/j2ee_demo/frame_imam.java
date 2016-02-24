@@ -12,7 +12,7 @@ public class frame_imam extends JFrame{
 		
 		JPanel panel = new JPanel();
 		JLabel label = new JLabel("Selamat Datang!");
-		JButton button = new JButton("Tekan Tombol");
+		JButton button = new JButton("Press Enter!");
 		
 		panel.add(label);
 		add(panel);
