@@ -3,30 +3,25 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 
+
 public class frame_imam extends JFrame{
 
+	Image image;
+	ImageBackgroundPanel panel;
+	
 	public frame_imam()
 	{
 		super("Imam Afriyadi");
-		setLayout(new FlowLayout());
-		
-		JPanel panel = new JPanel();
-		JLabel label = new JLabel("Selamat Datang!");
-		JButton button = new JButton("Press Enter!");
-		
-		panel.add(label);
-		add(panel);
-		add(button);
-		
-		penghendel hendel = new penghendel();
-		button.addActionListener(hendel);
+		initComponent();
 	}
 	
-	public class penghendel implements ActionListener
+	public void initComponent()
 	{
-		public void actionPerformed(ActionEvent e)
-		{
-			JOptionPane.showMessageDialog(null, "selamat datang anonymous :)");
-		}
+		image = new ImageIcon("imam.jpg").getImage();
+		panel = new ImageBackgroundPanel(image);
+		setPreferredSize(new Dimension(image.getWidth(null), image.getHeight(null)));
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
+	
 }
